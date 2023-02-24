@@ -2,3 +2,5 @@ Rental Record for John Doe
 	The Shawshank Redemption	3.5
 Amount owed is 3.5
 You earned1 frequent renter points
+Discount applied: 25.0%
+Discounted amount: 2.625

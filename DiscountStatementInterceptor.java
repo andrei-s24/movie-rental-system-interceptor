@@ -7,7 +7,7 @@ public class DiscountStatementInterceptor implements StatementInterceptor {
 
     @Override
     public void intercept(StatementContext context) {
-        double totalAmount = 0;
+        double totalAmount = context.getTotalCharge();
         double discountAmount = totalAmount * discountPercentage / 100.0;
         double discountedAmount = totalAmount - discountAmount;
         context.addToStatement("Discount applied: " + discountPercentage + "%");

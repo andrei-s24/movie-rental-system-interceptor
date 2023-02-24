@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.Vector;
 
 public class StatementContext {
     private Customer customer;
@@ -25,8 +25,16 @@ public class StatementContext {
         statement += "\n" + additionalInfo;
     }
 
-    public void getTotalCharge() {
-    
+    public double getTotalCharge() {
+        return customer.getTotalCharge();
+    }
+
+    public int getTotalFrequentRentalPoints() {
+        return customer.getTotalFrequentRentalPoints();
+    }
+
+    public Vector<Rental> getRentals() {
+        return customer.getRentals();
     }
 
 }

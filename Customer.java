@@ -17,6 +17,10 @@ class Customer {
         return _name;
     }
 
+    public Vector<Rental> getRentals() {
+        return _rentals;
+    }
+
     public String statement() {
         Enumeration<Rental> rentals = _rentals.elements();
         String result = "Rental Record for " + getName() + "\n";
@@ -30,7 +34,7 @@ class Customer {
 
         // add footer lines
         result += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
-        result += "You earned" + String.valueOf(getTotalFrequentRentalPoints()) + " frequent renter points";
+        result += "You earned " + String.valueOf(getTotalFrequentRentalPoints()) + " frequent renter points";
         return result;
     }
 
@@ -49,7 +53,7 @@ class Customer {
         return result;
     }
 
-    private double getTotalCharge() {
+    public double getTotalCharge() {
         double result = 0;
         Enumeration<Rental> rentals = _rentals.elements();
         while (rentals.hasMoreElements()) {
@@ -59,7 +63,7 @@ class Customer {
         return result;
     }
 
-    private int getTotalFrequentRentalPoints(){
+    public int getTotalFrequentRentalPoints(){
         int result = 0;
         Enumeration<Rental> rentals = _rentals.elements();
         while (rentals.hasMoreElements()) {
