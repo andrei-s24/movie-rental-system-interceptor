@@ -1,3 +1,3 @@
 public interface StatementInterceptor {
-    public String intercept(StatementContext context);
+    public void intercept(StatementContext context);
 }

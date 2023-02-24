@@ -4,8 +4,12 @@ import java.util.List;
 class StatementDispatcher {
     private List<StatementInterceptor> interceptors = new ArrayList<>();
 
-    public void registerInterceptor(StatementInterceptor interceptor) {
+    public void register(StatementInterceptor interceptor) {
         interceptors.add(interceptor);
+    }
+
+    public void remove(StatementInterceptor interceptor) {
+        interceptors.remove(interceptor);
     }
 
     public void dispatch(StatementContext context) {
