@@ -33,8 +33,4 @@ public class StatementContext {
         return customer.getTotalFrequentRentalPoints();
     }
 
-    public Vector<Rental> getRentals() {
-        return customer.getRentals();
-    }
-
 }
